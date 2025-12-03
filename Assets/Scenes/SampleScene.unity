@@ -450,7 +450,7 @@ Transform:
   m_GameObject: {fileID: 171734089}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.3400002, y: 1, z: -3.75}
+  m_LocalPosition: {x: -3.3400002, y: 2.24, z: -3.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -468,6 +468,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25508b32d5bb53846956485331d645dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Cube
+  _explodeRadius: 0
+  _explodeForce: 0
 --- !u!65 &171734092
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -602,7 +604,7 @@ Transform:
   m_GameObject: {fileID: 238419639}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.3899999, y: 1, z: -3.75}
+  m_LocalPosition: {x: 2.3899999, y: 2.24, z: -3.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -620,6 +622,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25508b32d5bb53846956485331d645dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Cube
+  _explodeRadius: 0
+  _explodeForce: 0
 --- !u!65 &238419642
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -737,6 +741,7 @@ GameObject:
   - component: {fileID: 330585544}
   - component: {fileID: 330585547}
   - component: {fileID: 330585548}
+  - component: {fileID: 330585549}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -811,13 +816,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.16547786, y: 0, z: 0, w: 0.98621356}
+  m_LocalPosition: {x: 0, y: 4.04, z: -8.81}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 19.05, y: 0, z: 0}
 --- !u!114 &330585547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -874,6 +879,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6a958350f08af0409706d6545a645a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InputMouse
+--- !u!114 &330585549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330585543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14af94e2ada047942842d86beedf4e14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HandleHit
+  _inputReader: {fileID: 330585548}
   _camera: {fileID: 330585545}
 --- !u!1 &410087039
 GameObject:
@@ -1227,7 +1245,7 @@ Transform:
   m_GameObject: {fileID: 1145174215}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.17, y: 1, z: -3.75}
+  m_LocalPosition: {x: -0.17, y: 2.24, z: -3.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1245,6 +1263,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25508b32d5bb53846956485331d645dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Cube
+  _explodeRadius: 0
+  _explodeForce: 0
 --- !u!65 &1145174218
 BoxCollider:
   m_ObjectHideFlags: 0
