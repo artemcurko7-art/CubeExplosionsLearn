@@ -434,6 +434,10 @@ GameObject:
   - component: {fileID: 171734092}
   - component: {fileID: 171734095}
   - component: {fileID: 171734091}
+  - component: {fileID: 171734099}
+  - component: {fileID: 171734098}
+  - component: {fileID: 171734097}
+  - component: {fileID: 171734096}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -468,8 +472,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25508b32d5bb53846956485331d645dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Cube
-  _explodeRadius: 0
-  _explodeForce: 0
+  _spawn: {fileID: 171734099}
+  _scale: {fileID: 171734098}
+  _colorChange: {fileID: 171734097}
+  _explode: {fileID: 171734096}
 --- !u!65 &171734092
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -574,6 +580,54 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &171734096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171734089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6930b74305d9f4344bbd87275383dbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Explode
+--- !u!114 &171734097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171734089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f02ae56ee7451d4fbc9d336f9594b8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorChange
+--- !u!114 &171734098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171734089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5e172b3e133a18439b1b3c84f305b18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Scale
+--- !u!114 &171734099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171734089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b4c50e385643648ad6c52dfdd79fa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Spawn
 --- !u!1 &238419639
 GameObject:
   m_ObjectHideFlags: 0
@@ -588,6 +642,10 @@ GameObject:
   - component: {fileID: 238419642}
   - component: {fileID: 238419645}
   - component: {fileID: 238419641}
+  - component: {fileID: 238419649}
+  - component: {fileID: 238419648}
+  - component: {fileID: 238419647}
+  - component: {fileID: 238419646}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -622,8 +680,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25508b32d5bb53846956485331d645dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Cube
-  _explodeRadius: 0
-  _explodeForce: 0
+  _spawn: {fileID: 238419649}
+  _scale: {fileID: 238419648}
+  _colorChange: {fileID: 238419647}
+  _explode: {fileID: 238419646}
 --- !u!65 &238419642
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -728,6 +788,54 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &238419646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238419639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6930b74305d9f4344bbd87275383dbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Explode
+--- !u!114 &238419647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238419639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f02ae56ee7451d4fbc9d336f9594b8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorChange
+--- !u!114 &238419648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238419639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5e172b3e133a18439b1b3c84f305b18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Scale
+--- !u!114 &238419649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238419639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b4c50e385643648ad6c52dfdd79fa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Spawn
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1229,6 +1337,10 @@ GameObject:
   - component: {fileID: 1145174218}
   - component: {fileID: 1145174221}
   - component: {fileID: 1145174217}
+  - component: {fileID: 1145174225}
+  - component: {fileID: 1145174224}
+  - component: {fileID: 1145174223}
+  - component: {fileID: 1145174222}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -1263,8 +1375,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25508b32d5bb53846956485331d645dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Cube
-  _explodeRadius: 0
-  _explodeForce: 0
+  _spawn: {fileID: 1145174225}
+  _scale: {fileID: 1145174224}
+  _colorChange: {fileID: 1145174223}
+  _explode: {fileID: 1145174222}
 --- !u!65 &1145174218
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1369,6 +1483,54 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1145174222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145174215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6930b74305d9f4344bbd87275383dbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Explode
+--- !u!114 &1145174223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145174215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f02ae56ee7451d4fbc9d336f9594b8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorChange
+--- !u!114 &1145174224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145174215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5e172b3e133a18439b1b3c84f305b18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Scale
+--- !u!114 &1145174225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145174215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b4c50e385643648ad6c52dfdd79fa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Spawn
 --- !u!1 &1405686074
 GameObject:
   m_ObjectHideFlags: 0
