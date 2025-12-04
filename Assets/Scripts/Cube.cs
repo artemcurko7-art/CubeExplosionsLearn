@@ -1,18 +1,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody), typeof(MeshRenderer))]
 public class Cube : MonoBehaviour
 {
-    [SerializeField] private Spawn _spawn;
-    [SerializeField] private Scale _scale;
-    [SerializeField] private Colored _colorChange;
-    [SerializeField] private Explode _explode;
+    [field:SerializeField] public int ChanceDivision {  get; private set; }
 
-    public void ProcessObject()
+    public Rigidbody Rigidbody { get; private set; }
+
+    private void Awake() =>
+        Rigidbody = GetComponent<Rigidbody>();
+
+    public void Initialize(Vector3 scale, Color color, int chanceDivision)
     {
-        _spawn.Spawner();
-        _scale.DecreaseScale(_spawn.Cubes);
-        _colorChange.ApplyColor(_spawn.Cubes);
-        _explode.Explosion();
-    }   
+        transform.localScale = scale;
+        transform.GetComponent<MeshRenderer>().material.color = color;
+        ChanceDivision = chanceDivision;
+    }
 }

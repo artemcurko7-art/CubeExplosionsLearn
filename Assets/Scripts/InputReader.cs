@@ -5,9 +5,11 @@ public class InputReader : MonoBehaviour
 {
     public event Action PressedButton;
 
+    private int _numberButton = 0;
+
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(_numberButton))
             PressedButton?.Invoke();
     }
 }
